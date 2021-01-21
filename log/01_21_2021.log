@@ -1,0 +1,12 @@
+Script APS started. [01/21/2021 | 13:39]
+
+
+[13:39:28]	Called initProjectMem function.
+[13:39:28]	Project_mem file already exist.
+[13:39:28]	Called initLib function.
+[13:39:28]	Called copyProjectStruct function.
+[13:39:28]	Copying Project struct file common to => /home/exiel/Projets/STMP/SOLO/B-CPE-210-REN-2-1-solostumper02-nathan.duchesne
+[13:39:28]	Called end function.
+
+
+Script APS ended. [01/21/2021 | 13:39]

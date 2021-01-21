@@ -65,7 +65,8 @@ $ ./aps.sh -h
 - Push the new updated project on their repos
 ######
 - Check if unwanted file are in the project dir
-
+######
+- Log system
 ---	
 
 ## Team	
