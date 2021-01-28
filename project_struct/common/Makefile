@@ -30,7 +30,7 @@ lib:
 			make -C lib/my/
 
 $(NAME): $(OBJ)
-			echo "\x1B[31mCompiling a Common Project.\n\n\n\x1B[0m"
+			@echo "\n\n\n\033[92mCompiling a Common Project.\033[0m\n\n\n"
 			gcc $(DFLAGS) -o $(NAME) $(OBJ) $(CFLAGS)
 
 clean:

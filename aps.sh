@@ -18,7 +18,8 @@ EXECUTION_DIR=$(pwd)
 EXECUTABLE_DIR="`dirname \"$0\"`"
 EXECUTABLE_DIR="`( cd \"$EXECUTABLE_DIR\" && pwd )`"
 
-LIB_PATH=""
+LIB_PATH="~/Projets/My_Lib"
+LIB_BACKUP_PATH="$EXECUTABLE_DIR/backup"
 DATE_HOURS=$(date +'%m/%d/%Y | %R')
 DATE=$(date +'%m_%d_%Y')
 HOURS=$(date +'%H:%M:%S')
@@ -63,10 +64,16 @@ initLib() {
         echo "You need to set the LIB_PATH in the config file."
         echo "[$HOURS]\tERROR: LIB_PATH not set." >>$LOG_PATH
     fi
+    if [ $(diff -r $LIB_PATH $LIB_BACKUP_PATH | grep -c .) -gt 0 ]; then
+        updateLib
+    else
+        echo "[$HOURS]\tLib Backup up to date." >>$LOG_PATH
+    fi
 }
 
 updateLib() {
     echo "[$HOURS]\tCalled updateLib function." >>$LOG_PATH
+    echo "[$HOURS]\tUpdating Lib Backup." >>$LOG_PATH
 }
 
 copyProjectStruct() {
@@ -103,6 +110,7 @@ help() {
 initLog
 echo "Script APS started. [$DATE_HOURS]\n\n" >>$LOG_PATH
 initProjectMem
+initLib
 case $1 in
 "-c")
     PROJECT_TYPE="common"

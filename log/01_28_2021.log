@@ -1,0 +1,9 @@
+Script APS started. [01/28/2021 | 13:00]
+
+
+[13:00:59]	Called initProjectMem function.
+[13:00:59]	Project_mem file already exist.
+[13:00:59]	Called initLib function.
+[13:00:59]	Lib Backup up to date.
+[13:00:59]	Called copyProjectStruct function.
+[13:00:59]	Copying Project struct file common to => /home/exiel/Projets/Perso/Scripts/APS/tests/common

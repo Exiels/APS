@@ -1,0 +1,11 @@
+Script APS started. [01/25/2021 | 08:11]
+
+
+[08:11:01]	Called initProjectMem function.
+[08:11:01]	Project_mem file already exist.
+[08:11:01]	Called copyProjectStruct function.
+[08:11:01]	Copying Project struct file common to => /home/exiel/Projets/PSU/B-PSU-101-REN-1-1-minishell1-nathan.duchesne
+[08:11:01]	Called end function.
+
+
+Script APS ended. [01/25/2021 | 08:11]
