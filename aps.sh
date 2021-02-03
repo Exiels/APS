@@ -116,17 +116,21 @@ case $1 in
 "-c")
     PROJECT_TYPE="common"
     copyProjectStruct
+    initCommit
     ;;
 "-g")
     PROJECT_TYPE="graphical"
     copyProjectStruct
+    initCommit
     ;;
 "-m")
     PROJECT_TYPE="math"
     copyProjectStruct
+    initCommit
     ;;
 "-h")
     help
+    end
     ;;
 *)
     echo "Unknown argument. See aps -h for help"
@@ -134,5 +138,4 @@ case $1 in
     end
     ;;
 esac
-initCommit
 end
