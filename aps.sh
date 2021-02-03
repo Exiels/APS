@@ -18,7 +18,7 @@ EXECUTION_DIR=$(pwd)
 EXECUTABLE_DIR="`dirname \"$0\"`"
 EXECUTABLE_DIR="`( cd \"$EXECUTABLE_DIR\" && pwd )`"
 
-LIB_PATH="~/Projets/My_Lib"
+LIB_PATH="$HOME/Projets/My_Lib/"
 LIB_BACKUP_PATH="$EXECUTABLE_DIR/backup"
 DATE_HOURS=$(date +'%m/%d/%Y | %R')
 DATE=$(date +'%m_%d_%Y')
@@ -35,7 +35,6 @@ PROJECT_TYPE=""
 BACKUP_LIB_PATH="backup/"
 
 initLog() {
-    echo "[$HOURS]\tCalled initLog function." >>$LOG_PATH
     if [ -e "$LOG_PATH.log" ]; then
         while [ -e "$LOG_PATH($LOG_PTR).log" ]; do
             LOG_PTR=$((LOG_PTR + 1))
@@ -74,12 +73,14 @@ initLib() {
 updateLib() {
     echo "[$HOURS]\tCalled updateLib function." >>$LOG_PATH
     echo "[$HOURS]\tUpdating Lib Backup." >>$LOG_PATH
+    cp -r "$LIB_PATH/." "$LIB_BACKUP_PATH"
 }
 
 copyProjectStruct() {
     echo "[$HOURS]\tCalled copyProjectStruct function." >>$LOG_PATH
     echo "[$HOURS]\tCopying Project struct file $PROJECT_TYPE to => $EXECUTION_DIR" >>$LOG_PATH
     cp -r "$EXECUTABLE_DIR/project_struct/$PROJECT_TYPE/." "$EXECUTION_DIR"
+    cp -r "$LIB_BACKUP_PATH/." "$EXECUTION_DIR"
 }
 
 initCommit() {

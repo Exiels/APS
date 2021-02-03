@@ -11,10 +11,10 @@
 int error_handler(int error_id)
 {
     switch (error_id) {
-        case /* an error_id */:
-            return (ERROR);
+        case 0:
+            return (NORMAL);
             break;
-        default: my_colorprint("ERROR : Unknow error.", "R");
+        default: my_printf("%w", "ERROR: Unknown Error.\n");
             return (ERROR);
             break;
     }

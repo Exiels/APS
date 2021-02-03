@@ -10,6 +10,7 @@
 
 //Defines:
     //Error:
+        #define NORMAL  0
         #define ERROR   84
 //Includes:
     //Temp:
