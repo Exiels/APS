@@ -132,6 +132,14 @@ case $1 in
     help
     end
     ;;
+"-b")
+    updateLib
+    end
+    ;;
+"-p")
+    initCommit
+    end
+    ;;
 *)
     echo "Unknown argument. See aps -h for help"
     echo "[$HOURS]\tERROR: Unknown Argument." >>$LOG_PATH

@@ -9,10 +9,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdlib.h>
-
-#define BUFF_SIZE   2048
-
-void my_colorprint(char *str, char color);
+#include "../includes/mylib.h"
 
 char *my_readfile(char const *filepath)
 {
